@@ -1,0 +1,543 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Surprise For Geetha ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    background:linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e293b,
+        #4c1d95,
+        #7c3aed,
+        #ec4899,
+    );
+    background-size:400% 400%;
+    animation:bg 15s ease infinite;
+}
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.screen{
+    position:absolute;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:30px 20px;
+    overflow-y:auto;
+    min-height: max-content;
+    width: 30px;
+    line-height: 0%;
+}
+
+.hidden{
+    display:none;
+}
+
+/* Gift */ 
+
+.gift{
+    font-size:140px;
+    cursor:pointer;
+    animation:bounce 2s infinite;
+    filter:drop-shadow(0 0 30px gold);
+    transition:1s;
+}
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+} 
+.big-heart{
+    height:fit-content;
+    width: max-content;
+    
+}
+.click-text{
+    margin-top:20px;
+    font-size:32px;
+    color:white;
+    font-weight:bold;
+    text-shadow:0 0 20px white;
+}
+/* Heart */
+
+.big-heart{
+    font-size:120px;
+    animation:heartbeat 1s infinite;
+    filter:drop-shadow(0 0 30px red);
+}
+
+@keyframes heartbeat{
+    0%{transform:scale(1);}
+    25%{transform:scale(1.2);}
+    50%{transform:scale(1);}
+    75%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+/* Glass Card */
+.card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 0 40px rgba(255,255,255,.2);
+    text-align:center;
+    max-width:750px;
+    width:90%;
+    animation:floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+.title{
+    font-size:50px;
+    color:white;
+    margin-bottom:20px;
+    text-shadow:0 0 20px white;
+}
+
+.message{
+    font-size:22px;
+    line-height:1.8;
+    color:white;
+}
+.card{
+animation:floatCard 8s ease-in-out infinite;
+}
+
+.btn{
+    margin-top:25px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    background:white;
+    color:#7c3aed;
+    box-shadow:0 0 25px white;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+    100%{transform:scale(1);}
+}
+
+/* Final Page */
+.final-title{
+    font-size:50px;
+    color:white;
+    text-align:center;
+    margin-top:10px;
+    animation:glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:
+        0 0 10px white,
+        0 0 20px pink;
+    }
+    to{
+        text-shadow:
+        0 0 20px white,
+        0 0 40px pink,
+        0 0 80px red;
+    }
+}
+
+.final-text{
+    margin-top:20px;
+    font-size:clamp(18px,3vw,22px);
+    line-height:1.9;
+    color:white;
+    text-align:center;
+    max-width:850px;
+    padding:10px;
+    overflow:visible;
+}
+
+/* Stars */
+
+.star{
+    position:absolute;
+    color:white;
+    pointer-events:none;
+    animation:twinkle 1s infinite;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.5);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
+
+/* Sparkles */
+
+.sparkle{
+    position:absolute;
+    pointer-events:none;
+    animation:sparkleAnim 3s ease forwards;
+}
+@media(max-width:600px){
+
+    .gift{
+        font-size:100px;
+    }
+
+    .big-heart{
+        font-size:90px;
+    }
+
+    .title{
+        font-size:34px;
+    }
+
+    .message{
+        font-size:18px;
+    }
+
+    .btn{
+        font-size:18px;
+        padding:12px 28px;
+    }
+
+    .card{
+        width:95%;
+        padding:25px;
+    }
+
+    .final-title{
+        font-size:34px;
+    }
+
+}
+@keyframes floatCard{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-4px);}
+}
+@keyframes sparkleAnim{
+    0%{
+        opacity:0;
+        transform:scale(.5);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.5);
+    }
+    100%{
+        opacity:0;
+        transform:scale(2);
+    }
+}
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    pointer-events:none;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<!-- PAGE 1 -->
+
+<div class="screen" id="page1">
+
+    <div class="gift" onclick="openGift()">🎁</div>
+
+    <div class="click-text">
+        Click The Gift ❤️
+    </div>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div class="screen hidden" id="page2">
+
+    <div class="big-heart">❤️</div>
+
+    <div class="card">
+
+        <h1 class="title" id="typing"></h1>
+
+        <div class="message">
+
+            ✨ A special surprise is waiting for someone amazing ✨
+
+            <br><br>
+
+            You are stronger than you think,
+            braver than you believe,
+            and brighter than any difficult day.
+
+            <br><br>
+
+            Every smile of yours lights up the world around you. ❤️
+
+        </div>
+
+        <button class="btn" onclick="showFinal()">
+            Open Message 💌
+        </button>
+
+    </div>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div class="screen hidden" id="page3">
+
+    <div class="card">
+
+        <h1 class="final-title">
+            🌹 Get Well Soon Geetha 🌹
+        </h1>
+
+        <div class="final-text">
+
+            Dear Geetha ❤️
+
+            <br><br>
+
+            Life may slow down for a while,
+            but brighter days are already on their way.
+
+            <br><br>
+
+            ✨ May every sunrise bring new strength.<br>
+            ✨ May every smile bring healing.<br>
+            ✨ May every moment bring peace.
+
+            <br><br>
+
+            🌷 You are strong.<br>
+            🌷 You are special.<br>
+            🌷 You are loved.
+
+            <br><br>
+
+            Take care of yourself,
+            rest well,
+            and come back with your beautiful smile.
+
+            <br><br>
+
+            ❤️ Wishing You A Speedy Recovery ❤️
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* Page Navigation */
+
+function openGift(){
+
+    document.querySelector(".gift").style.transform =
+    "scale(1.5) rotate(20deg)";
+
+    setTimeout(()=>{
+
+        document.getElementById("page1")
+        .classList.add("hidden");
+
+        document.getElementById("page2")
+        .classList.remove("hidden");
+
+        typeWriter();
+
+    },2500);
+
+}
+
+function showFinal(){
+
+document.querySelector(".btn").innerHTML =
+"Opening Surprise... ✨";
+
+setTimeout(()=>{
+
+document.getElementById("page2")
+.classList.add("hidden");
+
+document.getElementById("page3")
+.classList.remove("hidden");
+
+startFireworks();
+
+},3000);
+
+}
+
+/* Typewriter */
+
+const text="Hi Geetha Reddy 🌹";
+let i=0;
+
+function typeWriter(){
+
+    if(i<text.length){
+
+        document.getElementById("typing")
+        .innerHTML += text.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter,250);
+
+    }
+}
+
+/* Stars */
+
+function createStar(){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+    star.innerHTML="✦";
+
+    star.style.left=Math.random()*window.innerWidth+"px";
+    star.style.top=Math.random()*window.innerHeight+"px";
+    star.style.fontSize=(10+Math.random()*25)+"px";
+
+    document.body.appendChild(star);
+
+    setTimeout(()=>{
+        star.remove();
+    },3000);
+
+}
+
+setInterval(createStar,400);
+
+/* Sparkles */
+
+function createSparkle(){
+
+    const sparkle=document.createElement("div");
+
+    sparkle.className="sparkle";
+    sparkle.innerHTML="✨";
+
+    sparkle.style.left=Math.random()*window.innerWidth+"px";
+    sparkle.style.top=Math.random()*window.innerHeight+"px";
+    sparkle.style.fontSize=(10+Math.random()*20)+"px";
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(()=>{
+        sparkle.remove();
+    },3000);
+
+}
+setInterval(createSparkle,600);
+
+/* Fireworks */
+
+const canvas=document.getElementById("fireworks");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+function boom(){
+
+    let x=Math.random()*canvas.width;
+    let y=Math.random()*canvas.height/2;
+
+    for(let i=0;i<20;i++){
+
+        particles.push({
+            x:x,
+            y:y,
+            dx:(Math.random()-0.5)*10,
+            dy:(Math.random()-0.5)*10,
+            life:100
+        });
+
+    }
+
+}
+
+function animate(){
+
+    requestAnimationFrame(animate);
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach((p,index)=>{
+
+        p.x+=p.dx;
+        p.y+=p.dy;
+        p.life--;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,2,0,Math.PI*2);
+
+        ctx.fillStyle=`rgba(255,255,255,${p.life/100})`;
+        ctx.fill();
+
+        if(p.life<=0){
+            particles.splice(index,1);
+        }
+
+    });
+
+}
+
+animate();
+
+let fireworkInterval;
+
+function startFireworks(){
+    fireworkInterval = setInterval(boom,2500);
+}
+
+</script>
+
+</body>
+</html>
+
